@@ -7,8 +7,8 @@
 // Take "Command Line" arguments
 parse_str(implode('&', array_slice($argv, 1)), $_GET);
 // Set Input and Output file paths
-$inFilePath = ($_GET['inFile']) ? $_GET['inFile'] : '/auto/mz/cifs/ListData.csv';
-$outFilePath = ($_GET['outFile']) ? $_GET['outFile'] : '/auto/mz/cifs/ListOut.txt';
+$inFilePath = (isset($_GET['inFile'])) ? $_GET['inFile'] : '/auto/mz/cifs/ListData.csv';
+$outFilePath = (isset($_GET['outFile'])) ? $_GET['outFile'] : '/auto/mz/cifs/ListOut.txt';
 
 // Generate IN Statement
 $statementText = 'IN (';
